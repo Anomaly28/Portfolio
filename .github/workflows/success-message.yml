@@ -1,0 +1,13 @@
+name: Success Message on Push
+
+on: [push]
+
+jobs:
+  echo-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print success message
+        run: echo "✅ Code pushed successfully and GitHub Action ran!"
